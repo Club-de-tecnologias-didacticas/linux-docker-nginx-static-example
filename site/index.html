@@ -1,17 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi sitio estático</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <title>Currículum de Perrito</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    }
+    h1 {
+      color: #444;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    img {
+      width: 120px;
+      border-radius: 50%;
+      border: 4px solid #ddd;
+    }
+    section {
+      margin-top: 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      color: #666;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .habilidad {
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .barra {
+      height: 10px;
+      background: #ff9800;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      border: none;
+      background: #ff9800;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <main class="container">
-    <h1>Plantilla lista para desplegar</h1>
-    <p>Reemplaza este contenido por tu propio proyecto HTML/CSS/JS.</p>
-    <p>Si puedes ver esta página, el contenedor Docker con Nginx está funcionando correctamente.</p>
-    <a class="button" href="https://github.com" target="_blank" rel="noopener noreferrer">Ir a GitHub</a>
-  </main>
+
+<div class="container">
+  <div class="header">
+    <img src="https://place-puppy.com/puppy/y:200/x:300" alt="Firulais el Profesional"/>
+    <div>
+      <h1>Firulais el Profesional</h1>
+      <p><strong>Raza:</strong> Mestizo encantador</p>
+      <p><strong>Email:</strong> firulais@perros.com</p>
+      <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>Perfil</h2>
+    <p>Perro altamente motivado con experiencia en seguridad del hogar, compañía emocional y recuperación de objetos. Gran sentido del olfato y habilidades sociales excepcionales.</p>
+  </section>
+
+  <section>
+    <h2>Experiencia</h2>
+    <ul>
+      <li>🏠 Guardián del hogar (2021 - Actualidad)</li>
+      <li>🎾 Recuperador profesional de pelotas</li>
+      <li>🛋️ Compañero emocional certificado</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Habilidades</h2>
+    <p>Olfato</p>
+    <div class="habilidad"><div class="barra" style="width:95%"></div></div>
+    <p>Ladrido</p>
+    <div class="habilidad"><div class="barra" style="width:85%"></div></div>
+    <p>Obediencia</p>
+    <div class="habilidad"><div class="barra" style="width:70%"></div></div>
+  </section>
+
+  <section>
+    <h2>Educación</h2>
+    <ul>
+      <li>🎓 Escuela Canina Básica</li>
+      <li>🥇 Curso de “Sentarse y dar la pata”</li>
+    </ul>
+  </section>
+
+  <button onclick="mostrarLogro()">Ver logro especial 🐾</button>
+
+  <p id="logro"></p>
+</div>
+
+<script>
+function mostrarLogro() {
+  document.getElementById('logro').innerText = "🏆 Ganador del premio 'Buen Chico 2025'";
+}
+</script>
+
 </body>
 </html>
